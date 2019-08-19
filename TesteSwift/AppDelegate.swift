@@ -16,6 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window!.backgroundColor = UIColor.white
+        
+        let listaController = ListaCarrosViewController(nibName: "ListaCarrosViewController", bundle : nil)
+        let sobreController = SobreViewController(nibName: "SobreViewController", bundle : nil)
+
+        
+        let nav1 = MyNavigationController()
+        let nav2 = MyNavigationController()
+        
+        nav1.pushViewController(listaController, animated: false)
+        nav2.pushViewController(sobreController, animated: false)
+
+        let tabBarController = MyTabBarController()
+        tabBarController.viewControllers = [nav1, nav2]
+        nav1.tabBarItem.title = "Carros"
+        nav1.tabBarItem.image = UIImage(named: "tab_carros.png")
+        nav2.tabBarItem.title = "Sobre"
+        nav2.tabBarItem.image = UIImage(named: "tab_sobre.png")
+        
+        self.window!.rootViewController = tabBarController
+        self.window!.makeKeyAndVisible()
         return true
     }
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="cfF-sT-Ijz" customClass="CarroCell" customModule="TesteSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfF-sT-Ijz" id="tZI-kU-qpg">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jwr-Hj-2ie">
+                        <rect key="frame" x="16" y="10" width="120" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="e1d-7u-k0q"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Carro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oec-aw-wc1">
+                        <rect key="frame" x="144" y="10" width="215" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPo-8T-xer">
+                        <rect key="frame" x="144" y="44" width="215" height="16"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Descrição do Carro">
+                                <attributes>
+                                    <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oec-aw-wc1" firstAttribute="leading" secondItem="jwr-Hj-2ie" secondAttribute="trailing" constant="8" id="5Qh-UF-gxu"/>
+                    <constraint firstItem="jwr-Hj-2ie" firstAttribute="top" secondItem="tZI-kU-qpg" secondAttribute="top" constant="10" id="9CV-Kj-rcD"/>
+                    <constraint firstItem="oec-aw-wc1" firstAttribute="trailing" secondItem="dPo-8T-xer" secondAttribute="trailing" id="G02-8I-s6b"/>
+                    <constraint firstAttribute="bottom" secondItem="jwr-Hj-2ie" secondAttribute="bottom" constant="10" id="JBw-6u-Xn7"/>
+                    <constraint firstItem="oec-aw-wc1" firstAttribute="leading" secondItem="dPo-8T-xer" secondAttribute="leading" id="V44-cE-fzb"/>
+                    <constraint firstAttribute="trailing" secondItem="dPo-8T-xer" secondAttribute="trailing" constant="16" id="VHe-IR-HCz"/>
+                    <constraint firstAttribute="bottom" secondItem="dPo-8T-xer" secondAttribute="bottom" constant="10" id="irF-rz-Uyn"/>
+                    <constraint firstItem="jwr-Hj-2ie" firstAttribute="leading" secondItem="tZI-kU-qpg" secondAttribute="leading" constant="16" id="jFr-8w-mv4"/>
+                    <constraint firstItem="oec-aw-wc1" firstAttribute="top" secondItem="jwr-Hj-2ie" secondAttribute="top" id="pca-LP-HeT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellDesc" destination="dPo-8T-xer" id="ebW-Rz-Dl6"/>
+                <outlet property="cellImg" destination="jwr-Hj-2ie" id="bgh-AD-Q36"/>
+                <outlet property="cellNome" destination="oec-aw-wc1" id="nZW-AQ-AWM"/>
+            </connections>
+            <point key="canvasLocation" x="11.5" y="51"/>
+        </tableViewCell>
+    </objects>
+</document>
